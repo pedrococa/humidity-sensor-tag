@@ -16,5 +16,4 @@ parts:
     plugin: copy
     files:
       humidity.py: bin/humidity-read
-    after: [python3-sense-hat]
-
+    stage-packages: [python3-sense-hat]

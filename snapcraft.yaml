@@ -12,8 +12,13 @@ apps:
     command: bin/humidity-read
 
 parts:
+  sense-hat: 
+    plugin: python3
+    source: http://github.com/RPi-Distro/python-sense-hat
+    source-type: git
+    build-packages: [libjpeg-dev, zlib1g-dev]
+    stage-packages: [python3]
   humidity-read: 
     plugin: copy
     files:
       humidity.py: bin/humidity-read
-    stage-packages: [python3-sense-hat]
